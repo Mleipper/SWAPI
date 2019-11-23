@@ -20,7 +20,10 @@ namespace SWApiCaller.Data
 
         public string GetAllEntities()
         {
+
             return _jsonGetter.MakeRequest(_fullUri);
+  
+
         }
 
         public string GetEntityByInt(int Number)

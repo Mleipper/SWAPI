@@ -9,17 +9,17 @@ namespace SWApiCaller
         {
 
 
-            var people = new PeopleAPI();
+            var vehicles = new vehiclesAPI();
 
 
 
-            var result = people.GetEntityByInt(1);
+            var result = vehicles.GetEntityByInt(30);
 
             Console.WriteLine(result);
 
             Console.WriteLine("This is the Second lot of Data");
 
-            var result2 = people.GetAllEntities();
+            var result2 = vehicles.GetAllEntities();
 
             Console.WriteLine(result2);
 
