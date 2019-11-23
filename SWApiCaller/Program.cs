@@ -1,4 +1,5 @@
 ﻿using System;
+using SWApiCaller.Data;
 
 namespace SWApiCaller
 {
@@ -6,7 +7,15 @@ namespace SWApiCaller
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var endpoint = "https://swapi.co/api/starships/13/";
+
+            var jSONGetter = new JSONGetter();
+
+            var result = jSONGetter.MakeRequest(endpoint);
+
+            Console.WriteLine(result);
+
+            Console.ReadKey();
         }
     }
 }
