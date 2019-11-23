@@ -9,11 +9,11 @@ namespace SWApiCaller.DBModels
     {
         
         
-            public Vehicle()
-            {
-                this.Pilots = new HashSet<People>();
-                this.Films = new HashSet<Films>();
-            }
+            //public Vehicle()
+            //{
+            //    this.Pilots = new HashSet<People>();
+            //    this.Films = new HashSet<Films>();
+            //}
             [Key]
             public string Url { get; set; }
 
@@ -39,9 +39,9 @@ namespace SWApiCaller.DBModels
 
             public string Vehicle_class { get; set; }
 
-            public virtual ICollection<People> Pilots { get; set;}
+            //public virtual ICollection<People> Pilots { get; set;}
 
-            public virtual ICollection<Films> Films { get; set; }
+            //public virtual ICollection<Films> Films { get; set; }
 
             public DateTime Created { get; set; }
 

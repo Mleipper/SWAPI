@@ -7,11 +7,11 @@ namespace SWApiCaller.DBModels
 {
     public class People
     {
-        public People()
-        {
-            this.Films = new HashSet<Films>();
-            this.Vehicles = new HashSet<Vehicle>();
-        }
+        //public People()
+        //{
+        //    this.Films = new HashSet<Films>();
+        //    this.Vehicles = new HashSet<Vehicle>();
+        //}
         [Key]
         public string Url { get; set; }
 
@@ -33,11 +33,11 @@ namespace SWApiCaller.DBModels
 
         public string Homeworld { get; set; }
 
-        public virtual ICollection<Films> Films { get; set; }
+       // public virtual ICollection<Films> Films { get; set; }
 
         //public List<string> Species { get; set; }
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        //public virtual ICollection<Vehicle> Vehicles { get; set; }
 
         //public List<string> Starships { get; set; }
 
