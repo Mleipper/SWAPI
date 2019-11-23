@@ -6,32 +6,32 @@ namespace SWApiCaller.JSONModels
 {
     class FilmModel
     {
-        public string title { get; set; }
+        public string Title { get; set; }
 
-        public int episode_id { get; set; }
+        public int Episode_id { get; set; }
 
-        public string opening_crawl { get; set; }
+        public string Opening_crawl { get; set; }
 
-        public string director { get; set; }
+        public string Director { get; set; }
 
-        public string producer { get; set; }
+        public string Producer { get; set; }
 
-        public string release_date { get; set; }
+        public string Release_date { get; set; }
 
-        public List<string> characters { get; set; }
+        public List<string> Characters { get; set; }
 
-        public List<string> planets { get; set; }
+        public List<string> Planets { get; set; }
 
-        public List<string> starships { get; set; }
+        public List<string> Starships { get; set; }
 
-        public List<object> vehicles { get; set; }
+        public List<string> Vehicles { get; set; }
 
-        public List<string> species { get; set; }
+        public List<string> Species { get; set; }
 
-        public DateTime created { get; set; }
+        public DateTime Created { get; set; }
 
-        public DateTime edited { get; set; }
+        public DateTime Edited { get; set; }
 
-        public string url { get; set; }
+        public string Url { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SWApiCaller.JSONModels
 {
-    class StarshipsModel
+    class VehicleModel
     {
         public string Name { get; set; }
 
@@ -26,11 +26,7 @@ namespace SWApiCaller.JSONModels
 
         public string Consumables { get; set; }
 
-        public string Hyperdrive_rating { get; set; }
-
-        public string MGLT { get; set; }
-
-        public string Starship_class { get; set; }
+        public string Vehicle_class { get; set; }
 
         public List<string> Pilots { get; set; }
 
