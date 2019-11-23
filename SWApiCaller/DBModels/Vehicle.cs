@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SWApiCaller.DBModels
 {
-    class VehicleTable
+    public class Vehicle
     {
-        public class VehicleModel
-        {
-            public VehicleModel()
+        
+        
+            public Vehicle()
             {
-                this.Pilots = new HashSet<Pilots>();
+                this.Pilots = new HashSet<People>();
                 this.Films = new HashSet<Films>();
             }
-            
+            [Key]
             public string Url { get; set; }
 
             public string Name { get; set; }
@@ -38,15 +39,15 @@ namespace SWApiCaller.DBModels
 
             public string Vehicle_class { get; set; }
 
-            public virtual ICollection<Pilots> Pilots { get; set;}
+            public virtual ICollection<People> Pilots { get; set;}
 
-            public ICollection<Films> Films { get; set; }
+            public virtual ICollection<Films> Films { get; set; }
 
             public DateTime Created { get; set; }
 
             public DateTime Edited { get; set; }
 
             
-        }
+        
     }
 }
