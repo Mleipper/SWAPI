@@ -9,6 +9,6 @@ namespace SWApiCaller.Data
         public vehiclesAPI() : base("vehicles/")
         { 
                 
-        }
+        } 
     }
 }
