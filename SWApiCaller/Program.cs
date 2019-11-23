@@ -7,13 +7,22 @@ namespace SWApiCaller
     {
         static void Main(string[] args)
         {
-            var endpoint = "https://swapi.co/api/starships/13/";
 
-            var jSONGetter = new JSONGetter();
 
-            var result = jSONGetter.MakeRequest(endpoint);
+            var people = new PeopleAPI();
+
+
+
+            var result = people.GetEntityByInt(1);
 
             Console.WriteLine(result);
+
+            Console.WriteLine("This is the Second lot of Data");
+
+            var result2 = people.GetAllEntities();
+
+            Console.WriteLine(result2);
+
 
             Console.ReadKey();
         }
