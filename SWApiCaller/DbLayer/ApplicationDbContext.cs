@@ -7,7 +7,7 @@ using SWApiCaller.DBModels;
 
 namespace SWApiCaller.DbLayer
 {
-    class ApplicationDbContext:DbContext
+    public class ApplicationDbContext:DbContext
     {
         private string _connString;
 

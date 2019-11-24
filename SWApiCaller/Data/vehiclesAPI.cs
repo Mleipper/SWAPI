@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SWApiCaller.JSONModels;
 using SWApiCaller.DBModels;
+using System.Linq;
 
 namespace SWApiCaller.Data
 {
@@ -38,7 +39,7 @@ namespace SWApiCaller.Data
         {
             if (!string.IsNullOrEmpty(vehicle.Url))
             {
-
+                if (_dbContext.vehicles.Any(V => V.Url == vehicle.Url)) return;
                 Vehicle vehicle1 = new Vehicle()
                 {
                     Cargo_capacity = vehicle.Cargo_capacity,

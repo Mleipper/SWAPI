@@ -15,7 +15,7 @@ namespace SWApiCaller.Data
 
         private string _fullUri;
 
-        protected DbContext _dbContext;
+        protected ApplicationDbContext _dbContext;
 
         public APICaller(string endpoint)
         {
