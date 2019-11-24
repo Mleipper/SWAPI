@@ -8,20 +8,20 @@ using SWApiCaller.DBModels;
 
 namespace SWApiCaller.Data
 {
-    public class vehiclesAPI:APICaller
+    public class vehiclesAPI : APICaller
     {
         public vehiclesAPI() : base("vehicles/")
-        { 
-                
+        {
+
         }
 
         public IEnumerable<VehicleModel> GetVehicleModels()
         {
-            
+
             string response = GetAllEntities();
-            
-            var Vehicles = JsonConvert.DeserializeObject<VehiclesModel> (response);
-            
+
+            var Vehicles = JsonConvert.DeserializeObject<VehiclesModel>(response);
+
             return Vehicles.results;
         }
 
@@ -38,27 +38,30 @@ namespace SWApiCaller.Data
         {
             if (!string.IsNullOrEmpty(vehicle.Url))
             {
-                
-                    Vehicle vehicle1 = new Vehicle() {
-                        Cargo_capacity = vehicle.Cargo_capacity,
-                        Consumables = vehicle.Consumables,
-                        Cost_in_credits = vehicle.Cost_in_credits,
-                        Vehicle_class = vehicle.Vehicle_class,
-                        Created = vehicle.Created,
-                        Crew = vehicle.Crew,
-                        Edited = vehicle.Edited,
-                        Length = vehicle.Length,
-                        Manufacturer = vehicle.Manufacturer,
-                        Max_atmosphering_speed = vehicle.Max_atmosphering_speed,
-                        Model = vehicle.Model,
-                        Name = vehicle.Name,
-                        Passengers = vehicle.Passengers,
-                        Url = vehicle.Url
 
-                    };
-                    await _dbContext.AddAsync(vehicle1);
-                    _dbContext.SaveChanges();
-                
+                Vehicle vehicle1 = new Vehicle()
+                {
+                    Cargo_capacity = vehicle.Cargo_capacity,
+                    Consumables = vehicle.Consumables,
+                    Cost_in_credits = vehicle.Cost_in_credits,
+                    Vehicle_class = vehicle.Vehicle_class,
+                    Created = vehicle.Created,
+                    Crew = vehicle.Crew,
+                    Edited = vehicle.Edited,
+                    Length = vehicle.Length,
+                    Manufacturer = vehicle.Manufacturer,
+                    Max_atmosphering_speed = vehicle.Max_atmosphering_speed,
+                    Model = vehicle.Model,
+                    Name = vehicle.Name,
+                    Passengers = vehicle.Passengers,
+                    Url = vehicle.Url
+
+                };
+
+                await _dbContext.AddAsync(vehicle1);
+
+                _dbContext.SaveChanges();
+
             }
         }
 
@@ -68,7 +71,7 @@ namespace SWApiCaller.Data
             {
                 await SaveVehicle(vehicle);
             }
-        
+
         }
     }
 }

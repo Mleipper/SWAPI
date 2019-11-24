@@ -11,11 +11,11 @@ namespace SWApiCaller
 
             //var result2 = vehicles.GetSingleVehicleByInt(4);
 
-            var results2 = vehicles.GetVehicleModels();
+            var vehiclesList = vehicles.GetVehicleModels();
 
-            Console.WriteLine(results2);
+            Console.WriteLine(vehiclesList);
 
-            await vehicles.SaveAllVehicles(results2);
+            await vehicles.SaveAllVehicles(vehiclesList);
 
             Console.ReadKey();
         }

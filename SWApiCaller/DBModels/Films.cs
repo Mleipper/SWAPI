@@ -41,6 +41,6 @@ namespace SWApiCaller.DBModels
 
         public DateTime Edited { get; set; }
 
-        
+
     }
 }
