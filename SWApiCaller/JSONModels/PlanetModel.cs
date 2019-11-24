@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SWApiCaller.JSONModels
 {
-    class PlanetModel
+    public class PlanetModel
     {
         public string Name { get; set; }
 

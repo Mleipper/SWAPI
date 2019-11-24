@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SWApiCaller.JSONModels
 {
-    class VehicleModel
+    public class VehicleModel
     {
         public string Name { get; set; }
 
@@ -37,5 +37,13 @@ namespace SWApiCaller.JSONModels
         public DateTime Edited { get; set; }
 
         public string Url { get; set; }
+    }
+
+    public class VehiclesModel
+    {
+        public int count { get; set; }
+        public string next { get; set; }
+        public object previous { get; set; }
+        public List<VehicleModel> results { get; set; }
     }
 }

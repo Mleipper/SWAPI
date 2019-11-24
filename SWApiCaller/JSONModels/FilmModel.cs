@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SWApiCaller.JSONModels
 {
-    class FilmModel
+    public class FilmModel
     {
         public string Title { get; set; }
 

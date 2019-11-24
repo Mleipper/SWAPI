@@ -5,24 +5,17 @@ namespace SWApiCaller
 {
     class Program
     {
-        static void Main(string[] args)
+        static async System.Threading.Tasks.Task Main(string[] args)
         {
-
-
             var vehicles = new vehiclesAPI();
 
+            //var result2 = vehicles.GetSingleVehicleByInt(4);
 
+            var results2 = vehicles.GetVehicleModels();
 
-            var result = vehicles.GetEntityByInt(30);
+            Console.WriteLine(results2);
 
-            Console.WriteLine(result);
-
-            Console.WriteLine("This is the Second lot of Data");
-
-            var result2 = vehicles.GetAllEntities();
-
-            Console.WriteLine(result2);
-
+            await vehicles.SaveAllVehicles(results2);
 
             Console.ReadKey();
         }

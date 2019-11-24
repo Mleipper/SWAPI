@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SWApiCaller.DbLayer;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +15,13 @@ namespace SWApiCaller.Data
 
         private string _fullUri;
 
+        protected DbContext _dbContext;
+
         public APICaller(string endpoint)
         {
             _fullUri = _baseUri + endpoint;
+
+            _dbContext = new ApplicationDbContext();
         }
 
         public string GetAllEntities()
