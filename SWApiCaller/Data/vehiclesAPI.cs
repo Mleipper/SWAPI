@@ -28,11 +28,20 @@ namespace SWApiCaller.Data
 
         public VehicleModel GetSingleVehicleByInt(int num)
         {
-            string response = GetEntityByInt(num);
+            VehicleModel vehicle;
+            try
+            {
+                string response = GetEntityByInt(num);
 
-            var Vehicle = JsonConvert.DeserializeObject<VehicleModel>(response);
+                vehicle = JsonConvert.DeserializeObject<VehicleModel>(response);
+            }
+            catch (Exception e){
 
-            return Vehicle;
+                Console.WriteLine(e);
+
+                vehicle = new VehicleModel();
+            }
+            return vehicle;
         }
 
         public async Task SaveVehicle(VehicleModel vehicle)
