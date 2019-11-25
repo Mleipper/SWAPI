@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWApiCaller", "SWApiCaller\SWApiCaller.csproj", "{C4E4F70C-6ECF-436A-BFBB-76C380DC3EBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWApiCaller", "SWApiCaller\SWApiCaller.csproj", "{C4E4F70C-6ECF-436A-BFBB-76C380DC3EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWAPICallerTests", "SWAPICallerTests\SWAPICallerTests.csproj", "{AA04BBFF-B407-4373-B20D-A33D065BDB52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C4E4F70C-6ECF-436A-BFBB-76C380DC3EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E4F70C-6ECF-436A-BFBB-76C380DC3EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E4F70C-6ECF-436A-BFBB-76C380DC3EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA04BBFF-B407-4373-B20D-A33D065BDB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA04BBFF-B407-4373-B20D-A33D065BDB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA04BBFF-B407-4373-B20D-A33D065BDB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA04BBFF-B407-4373-B20D-A33D065BDB52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
