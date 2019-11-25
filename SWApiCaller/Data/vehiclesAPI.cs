@@ -9,39 +9,16 @@ using System.Linq;
 
 namespace SWApiCaller.Data
 {
-    public class VehiclesAPI : APICaller
+    public class VehiclesAPI : APICaller<JsonListModel<VehicleModel>, VehicleModel>
     {
         public VehiclesAPI() : base("vehicles/")
         {
 
         }
-
-        public IEnumerable<VehicleModel> GetVehicleModels()
+               
+        protected override async Task SaveModel(VehicleModel vehicle)
         {
-
-            string response = GetAllEntities();
-
-            var Vehicles = JsonConvert.DeserializeObject<VehiclesModel>(response);
-
-            return Vehicles.results;
-        }
-
-        public VehicleModel GetSingleVehicleByInt(int num)
-        {
-            VehicleModel vehicle;
-            try
-            {
-                string response = GetEntityByInt(num);
-
-                vehicle = JsonConvert.DeserializeObject<VehicleModel>(response);
-            }
-            catch (Exception e){
-
-                Console.WriteLine(e);
-
-                vehicle = new VehicleModel();
-            }
-            return vehicle;
+            await SaveVehicle(vehicle);
         }
 
         public async Task SaveVehicle(VehicleModel vehicle)
@@ -75,13 +52,5 @@ namespace SWApiCaller.Data
             }
         }
 
-        public async Task SaveAllVehicles(IEnumerable<VehicleModel> vehicles)
-        {
-            foreach (var vehicle in vehicles)
-            {
-                await SaveVehicle(vehicle);
-            }
-
-        }
     }
 }

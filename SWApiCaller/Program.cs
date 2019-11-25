@@ -9,14 +9,15 @@ namespace SWApiCaller
         {
             var vehicles = new VehiclesAPI();
 
-            var Nullvehicle = vehicles.GetSingleVehicleByInt(3);
+            //var Nullvehicle = vehicles.GetSingleModelByInt(3);
+            var singleVehicle = vehicles.GetSingleModelByInt(4);
 
-            //var vehiclesList = vehicles.GetVehicleModels();
+            //var vehiclesList = vehicles.GetModels();
 
-            //Console.WriteLine(vehiclesList);
-            Console.WriteLine(Nullvehicle);
+            Console.WriteLine(singleVehicle.Url);
+            //Console.WriteLine(Nullvehicle);
 
-           // await vehicles.SaveAllVehicles(vehiclesList);
+             //await vehicles.SaveAllModels(vehiclesList);
 
             Console.ReadKey();
         }
