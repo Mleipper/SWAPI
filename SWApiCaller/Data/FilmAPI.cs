@@ -13,9 +13,14 @@ namespace SWApiCaller.Data
         
         }
 
-        protected override Task SaveModel(FilmModel model)
+        protected override async Task SaveModel(FilmModel Film)
         {
-            throw new NotImplementedException();
+            await SaveFilm(Film);
+        }
+
+        public async Task SaveFilm(FilmModel Film)
+        { 
+            throw new NotImplementedException(); 
         }
     }
 }

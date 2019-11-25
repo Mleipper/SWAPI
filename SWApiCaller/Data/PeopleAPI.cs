@@ -12,9 +12,15 @@ namespace SWApiCaller.Data
         { 
         }
 
-        protected override Task SaveModel(PeopleModel model)
+        protected override async Task SaveModel(PeopleModel people)
+        {
+            await SavePeople(people);
+        }
+
+        public async Task SavePeople(PeopleModel people)
         {
             throw new NotImplementedException();
         }
+
     }
 }
