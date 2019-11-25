@@ -7,7 +7,7 @@ namespace SWApiCaller
     {
         static async System.Threading.Tasks.Task Main(string[] args)
         {
-            var vehicles = new vehiclesAPI();
+            var vehicles = new VehiclesAPI();
 
             var Nullvehicle = vehicles.GetSingleVehicleByInt(3);
 

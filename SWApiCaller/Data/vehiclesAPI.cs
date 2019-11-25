@@ -9,9 +9,9 @@ using System.Linq;
 
 namespace SWApiCaller.Data
 {
-    public class vehiclesAPI : APICaller
+    public class VehiclesAPI : APICaller
     {
-        public vehiclesAPI() : base("vehicles/")
+        public VehiclesAPI() : base("vehicles/")
         {
 
         }
