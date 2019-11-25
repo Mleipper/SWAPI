@@ -38,12 +38,4 @@ namespace SWApiCaller.JSONModels
 
         public string Url { get; set; }
     }
-
-    public class VehiclesModel
-    {
-        public int count { get; set; }
-        public string next { get; set; }
-        public object previous { get; set; }
-        public List<VehicleModel> results { get; set; }
-    }
 }
